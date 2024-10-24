@@ -1,0 +1,38 @@
+body {
+    font-family:'Gill Sans MT', sans-serif;
+}
+
+.section {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover; 
+    background-position: center; 
+}
+
+.section1 {
+    /* background-image: url('./resources/images/home.png');  */
+    color: white;
+}
+
+.section2 {
+    background-color: black; 
+    color: white;
+}
+
+.btn-get-started {
+    padding: 10px 20px; 
+    font-size: 20px; 
+    background-color: #FFD700; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.btn-get-started:hover {
+    background-color: #FFC107; 
+}
