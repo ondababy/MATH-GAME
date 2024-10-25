@@ -19,14 +19,20 @@ define('BASE_URL', '/it-professional-elective/app/');
         <a href="<?php echo BASE_URL; ?>index.php" class="navbar-brand" style="color: white; font-family: 'DejaVu Sans Mono', monospace; font-stretch: extra-expanded; font-size: 30px; font-weight: bold;">
             Do Math & Conquer
         </a>
-        <div class="d-flex">
-            <a href="<?php echo BASE_URL; ?>users/login.php" class="btn btn-light me-3" style="background-color: #F5F4B3; color: black; font-weight: bold;">
-                Log in
-            </a>
-            <a href="<?php echo BASE_URL; ?>users/register.php" class="btn btn-light me-2" style="background-color: #F5F4B3; color: black; font-weight: bold;">
-                Sign up
-            </a>
-        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#addition">Addition</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#subtraction">Subtraction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#multiplication">Multiplication</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#division">Division</a>
+            </li>
+        </ul>
     </div>
 </div>
 </body>
