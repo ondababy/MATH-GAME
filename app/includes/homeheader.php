@@ -19,7 +19,7 @@ define('BASE_URL', '/it-professional-elective/app/');
         <a href="<?php echo BASE_URL; ?>index.php" class="navbar-brand" style="color: white; font-family: 'DejaVu Sans Mono', monospace; font-stretch: extra-expanded; font-size: 30px; font-weight: bold;">
             Do Math & Conquer
         </a>
-        <ul class="nav">
+        <!-- <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link text-white" href="#addition">Addition</a>
             </li>
@@ -32,7 +32,7 @@ define('BASE_URL', '/it-professional-elective/app/');
             <li class="nav-item">
                 <a class="nav-link text-white" href="#division">Division</a>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </div>
 </body>

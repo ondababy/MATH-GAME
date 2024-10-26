@@ -1,73 +1,166 @@
 <?php
 include("./includes/homeheader.php");
+
+function generateBackground($symbol) {
+    $background = "";
+    for ($i = 0; $i < 30; $i++) {
+        $x = rand(0, 100); 
+        $y = rand(0, 100); 
+        $opacity = rand(10, 40) / 100;
+        $background .= "<span style='position:absolute; top:{$y}%; left:{$x}%; opacity:{$opacity}; font-size: 5rem;'>$symbol</span>";
+    }
+    return $background;
+}
 ?>
 
 <style>
     .section {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 120vh; 
+        justify-content: space-between; /* Align content on the sides */
+        align-items: center; /* Center items vertically */
+        flex-direction: row; /* Use row direction */
+        height: 130vh;
         padding: 20px;
         color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        text-align: center; /* Center align text */
-    }
-    
-    .section-addition {
-        background-color: #37AFE1; 
+        text-align: left; /* Align text to the left */
+        position: relative;
+        overflow: hidden; 
+        background-size: cover;
+        background-position: center;
     }
 
-    .section-subtraction {
+    .section-addition, .section-multiplication {
+        background-color: #37AFE1;
+    }
+
+    .section-subtraction, .section-division {
         color: black;
-        background-color: white; 
+        background-color: #FFFECB;
     }
 
-    .section-multiplication {
-        background-color: #37AFE1; 
+    .text-content {
+        flex: 1;
+        padding: 0;
     }
 
-    .section-division {
-        color: black;
-        background-color: white; 
+    .image-holder {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    h2 {
+    .text-content h2 {
         font-family: 'DejaVu Sans Mono', monospace;
-        font-size: 3rem; 
+        font-size: 4.7rem;
         font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        margin-bottom: 10px;
     }
 
-    p {
-        font-size: 1.5rem; 
-        margin-top: 10px; 
+    .text-content p {
+        font-size: 2.5rem;
+        font-weight: 500;
+        width: 80%;
+        max-width: 1000px;
+        margin-bottom: 20px;
+    }
+
+    .text-content .trivia {
+        font-size: 1.7rem;
+        color: #333333;
+        font-weight: bold;
+        font-style: italic;
+        margin-top: 15px;
+        max-width: 600px;
+    }
+
+    .start-btn {
+        margin: 20px auto; 
+        padding: 8px 16px;
+        background-color: #FF5733;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        width: 50%;
+        max-width: 600px;
+        align-items: center;
+    }
+
+    .start-btn:hover {
+        background-color: #e04b29;
+    }
+
+    .symbol-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
     }
 </style>
 
 <section class="section section-addition">
-    <div>
+    <div class="symbol-bg">
+        <?php echo generateBackground('+'); ?>
+    </div>
+    <div class="text-content">
         <h2>Addition</h2>
-        <p>Practice your addition skills with engaging exercises and fun games. Challenge yourself and improve your speed!</p>
+        <p>Addition is where math magic begins! You can count, add numbers together, and see how big numbers can grow. Whether it’s adding up points in a game or finding totals, addition makes everything more fun!</p>
+        <div class="trivia">Did you know? Adding numbers helps keep your brain sharp, and it’s the first step to solving bigger problems!</div>
+        <a href="learning/addition.php" class="start-btn">Start Learning ➔</a>
+    </div>
+    <div class="image-holder">
+        <img src="resources/images/8.png" alt="Addition Image" style="width: 1000px; height: 1000px;">
     </div>
 </section>
 
 <section class="section section-subtraction">
-    <div>
+    <div class="symbol-bg">
+        <?php echo generateBackground('−'); ?>
+    </div>
+    <div class="text-content">
         <h2>Subtraction</h2>
-        <p>Enhance your subtraction skills through exciting challenges. Discover new techniques and strategies!</p>
+        <p>Subtraction lets you find what’s left after taking something away. It’s like magic! Subtracting numbers can help you keep track of your stuff, like toys, snacks, or points in a game. Let’s practice “taking away” and see what we get!</p>
+        <div class="trivia">Fun Fact: Subtracting can help you get ready for puzzles and mystery games, where every clue counts!</div>
+        <a href="learning/subtraction.php" class="start-btn">Start Learning ➔</a>
+    </div>
+    <div class="image-holder">
+        <img src="resources/images/6.png" alt="Subtraction Image"  style="width: 600px; height: 600px;">
     </div>
 </section>
 
 <section class="section section-multiplication">
-    <div>
+    <div class="symbol-bg">
+        <?php echo generateBackground('×'); ?>
+    </div>
+    <div class="text-content">
         <h2>Multiplication</h2>
-        <p>Master your multiplication tables with interactive learning. Become a multiplication whiz in no time!</p>
+        <p>Multiplication is super cool! It’s like addition but faster. Instead of adding the same number again and again, we can multiply. It’s a great way to count quickly, like finding the total number of chocolates in a big box or stars in the sky!</p>
+        <div class="trivia">Cool Tip: Multiplying can make you faster at calculations and helps with anything that comes in groups!</div>
+        <a href="learning/multiplication.php" class="start-btn">Start Learning ➔</a>
+    </div>
+    <div class="image-holder">
+        <img src="resources/images/1.png" alt="Multiplication Image"  style="width: 600px; height: 600px;">
     </div>
 </section>
 
 <section class="section section-division">
-    <div>
+    <div class="symbol-bg">
+        <?php echo generateBackground('÷'); ?>
+    </div>
+    <div class="text-content">
         <h2>Division</h2>
-        <p>Improve your division skills with thrilling problems. Tackle challenges and elevate your understanding!</p>
+        <p>Division is like sharing! When you have a lot of things and want to share them equally, division helps you out. It’s perfect for things like sharing cookies with friends or splitting points in a game. Let’s learn to share like a pro!</p>
+        <div class="trivia">Did you know? Division can help with fair sharing, making it easier to split things equally with friends!</div>
+        <a href="learning/division.php" class="start-btn">Start Learning ➔</a>
+    </div>
+    <div class="image-holder">
+        <img src="resources/images/4.png" alt="Division Image"  style="width: 600px; height: 600px;">
     </div>
 </section>

@@ -186,7 +186,7 @@ include("./includes/header.php");
             <h1>Sharpen Your Math Skills Through Fun Games</h1>
             <p>Challenge yourself with exciting math games that enhance your skills while making learning fun.</p>
             <p>Whether you're practicing or testing your knowledge, our interactive games will boost your accuracy, speed, and confidence in math.</p>
-            <a href="home.php" class="cta-button">Start Playing Now</a>
+            <a href="home.php" class="cta-button">Get Started</a>
         </div>
         <div class="right-content">
             <img class="image-placeholder" src="resources/images/mathhh.jpg" alt="Fun Math Games" />
