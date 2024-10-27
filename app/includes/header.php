@@ -12,28 +12,27 @@ define('BASE_URL', '/it-professional-elective/app/');
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Do Math & Conquer</title>
     <style>
-        /* Header and Button Styling */
         .navbar {
-            background-color: #07244C; /* Deep navy blue */
+            background-color: #07244C; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         .navbar-brand {
-            color: #E5EAF3; /* Light blue-gray */
+            color: #E5EAF3; 
             font-family: 'Pacifico', cursive;
             font-size: 30px;
             font-weight: bold;
         }
         .navbar-brand:hover {
-            color: #7671FA; /* Primary blue */
+            color: #7671FA; 
         }
         .btn-light {
-            background-color: #F5F4B3; /* Soft yellowish color */
-            color: #07244C; /* Deep navy blue */
+            background-color: #F5F4B3; 
+            color: #07244C;
             font-weight: bold;
             transition: background-color 0.3s;
         }
         .btn-light:hover {
-            background-color: #7671FA; /* Primary blue */
+            background-color: #7671FA;
             color: white;
         }
     </style>
