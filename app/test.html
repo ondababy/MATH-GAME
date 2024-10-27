@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementary Math Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 2em;
+            border-radius: 0.5em;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+
+        #timer {
+            font-size: 1.5em;
+            color: #333;
+            margin: 1em 0;
+            background-color: #e8f0fe;
+            padding: 0.5em;
+            border-radius: 0.3em;
+            border: 1px solid #c5c9e9;
+        }
+
+        #submit-btn, #start-btn, #reveal-btn {
+            font-size: 1.1em;
+            font-weight: 500;
+            display: block;
+            margin: 1em auto;
+            background-color: #4CAF50;
+            border-radius: 0.3em;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #ffffff;
+            padding: 0.6em 2em;
+            transition: background-color 0.3s ease;
+        }
+
+        #submit-btn:hover, #start-btn:hover, #reveal-btn:hover {
+            background-color: #45a049;
+        }
+
+        #question {
+            font-size: 1.8em;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 1em;
+            border-radius: 0.3em;
+            margin: 1em 0;
+        }
+
+        input[type="number"] {
+            font-size: 1em;
+            width: 3em;
+            padding: 0.2em;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 0.3em;
+            margin: 0 0.2em;
+        }
+
+        .alert {
+            display: none;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 0.3em;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .solution-container {
+            display: none;
+            margin-top: 1em;
+            padding: 1em;
+            background-color: #e8f0fe;
+            border: 1px solid #c5c9e9;
+            border-radius: 0.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Elementary Math Game</h3>
+        <p>Fill in the blank with the correct answer!</p>
+        <div id="timer">Timer: 60 seconds</div>
+        <div id="question"></div>
+        <button id="start-btn">Start</button>
+        <button id="submit-btn">Submit</button>
+        <button id="reveal-btn">Reveal Answer</button>
+        <div id="alert" class="alert"></div>
+
+        <div id="solution-container" class="solution-container">
+            <h4>Solution:</h4>
+            <div id="solution-display"></div>
+        </div>
+    </div>
+
+    <script>
+        const startBtn = document.getElementById('start-btn');
+        const question = document.getElementById('question');
+        const submitBtn = document.getElementById('submit-btn');
+        const revealBtn = document.getElementById('reveal-btn');
+        const alertBox = document.getElementById('alert');
+        const solutionContainer = document.getElementById('solution-container');
+        const solutionDisplay = document.getElementById('solution-display');
+        const timerDisplay = document.getElementById('timer');
+
+        let solution;
+        let num1, num2;
+
+        let timer;
+        let timeRemaining = 60;
+
+        const randomValue = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+        const showAlert = (message, type) => {
+            alertBox.innerHTML = message;
+            alertBox.className = `alert ${type === 'success' ? 'alert-success' : 'alert-error'}`;
+            alertBox.style.display = 'block';
+            setTimeout(() => { alertBox.style.display = 'none'; }, 2000);
+        };
+
+        const questionGenerator = () => {
+            num1 = randomValue(1, 20);
+            num2 = randomValue(1, 20);
+            solution = num1 + num2;
+
+            question.innerHTML = `${num1} + ${num2} = <input type="number" id="inputValue" placeholder="?">`;
+        };
+
+        let gameActive = false;
+
+        revealBtn.style.display = 'none';
+
+        startBtn.addEventListener("click", () => {
+            if (!gameActive) {
+                gameActive = true; 
+                timeRemaining = 60; 
+                timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`; 
+                startBtn.style.display = 'none';
+                questionGenerator();
+                revealBtn.style.display = 'inline-block';
+                startTimer(); 
+            }
+        });
+
+        const startTimer = () => {
+            clearInterval(timer); 
+            timer = setInterval(() => {
+                timeRemaining--;
+                timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`;
+                if (timeRemaining <= 0) {
+                    clearInterval(timer);
+                    gameActive = false;
+                    showAlert("Time's up! You can start a new game.", "error");
+                    resetGame();
+                }
+            }, 1000);
+        };
+
+        submitBtn.addEventListener("click", () => {
+            let userInput = document.getElementById("inputValue").value;
+            if (userInput) {
+                if (parseInt(userInput) === solution) {
+                    showAlert("Great Job! Correct Answer.", "success");
+                    timeRemaining = 60; // Reset timer to 60
+                    timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`; // Update display
+                    questionGenerator(); // Generate next question
+                    solutionContainer.style.display = 'none';
+                } else {
+                    showAlert("Oops! That's not correct.", "error");
+                }
+            } else {
+                showAlert("Please enter a value.", "error");
+            }
+        });
+
+        const generateSolutionText = () => {
+            return `${num1} + ${num2} = <strong>${solution}</strong>`;
+        };
+
+        revealBtn.addEventListener("click", () => {
+            solutionContainer.style.display = 'block';
+            solutionDisplay.innerHTML = generateSolutionText();
+        });
+
+        const resetGame = () => {
+            startBtn.style.display = 'block';
+            question.innerHTML = '';
+            solutionContainer.style.display = 'none';
+            clearInterval(timer);
+            gameActive = false;
+        };
+    </script>    
+</body>
+</html>

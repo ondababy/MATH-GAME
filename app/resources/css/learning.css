@@ -1,0 +1,89 @@
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #F3F4F3;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        background-color: #2695B2;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand {
+        color: #EDE2AE;
+        font-family: 'DejaVu Sans Mono', monospace;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .container {
+        max-width: 600px;
+        background-color: white;
+        padding: 30px;
+        margin: 50px auto; 
+        margin-left: 500px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        color: #2695B2;
+        margin-top: 20px;
+        border-bottom: 2px solid #D4CBE5;
+        padding-bottom: 5px;
+        font-size: 3em; 
+    }
+
+    p {
+        font-size: 2em;
+        color: #333;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    ul {
+        font-size: 1.5em;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 1em;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .knowledge-test {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.2em;
+        color: #2695B2;
+        font-weight: bold;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .start-button {
+        padding: 10px 20px;
+        background-color: #2695B2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .start-button:hover {
+        background-color: #1e7f9f;
+    }
