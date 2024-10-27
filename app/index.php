@@ -3,29 +3,32 @@ include("./includes/header.php");
 ?>
 
 <style>
+    /* Footer Styling */
     .footer {
-        background-color: #37AFE1;
-        color: white;
+        background-color: #7671FA; /* Primary color */
+        color: #E5EAF3; /* Light color for contrast */
         padding: 20px 0;
         text-align: center;
     }
 
     .footer a {
-        color: white;
+        color: #E5EAF3;
         text-decoration: none;
         margin: 0 15px;
         transition: color 0.3s;
     }
 
     .footer a:hover {
-        color: #FFD700;
+        color: #FFD700; /* Gold hover color for emphasis */
     }
 
     .footer .social-icons a {
         margin: 0 10px;
         font-size: 20px;
+        color: #E5EAF3;
     }
 
+    /* Topics section */
     .topics {
         display: flex;
         justify-content: center;
@@ -40,48 +43,44 @@ include("./includes/header.php");
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
         border-radius: 8px; 
         overflow: hidden; 
+        background-color: #E5EAF3; /* Light background for cards */
+        color: #07244C; /* Dark text color */
     }
 
-    .topic img {
-        width: 100%; 
-        height: auto; 
+    .topics h3 {
+        margin: 15px 0 10px;
+        color: #07244C; /* Heading color */
     }
 
-    .topic h3 {
-        margin: 15px 0 10px; 
-    }
-
-    .topic p {
-        padding: 0 15px 15px; 
-    }
-
+    /* Features Section */
     .features-section {
-        padding: 60px 0; 
+        padding: 60px 0;
         text-align: center;
-        background-color: #fff;
+        background-color: #E5EAF3; /* Light background */
     }
 
     .section-title {
-        font-size: 36px; 
+        font-size: 36px;
         font-weight: bold;
-        margin-bottom: 60px; 
+        margin-bottom: 60px;
+        color: #07244C; /* Dark text color */
     }
 
     .features {
         display: flex;
         flex-direction: column;
-        gap: 50px; 
+        gap: 50px;
     }
 
     .feature {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px; 
+        gap: 30px;
     }
 
     .feature-img img {
-        width: 130px; 
+        width: 130px;
         height: 200px;
     }
 
@@ -90,71 +89,59 @@ include("./includes/header.php");
     }
 
     .feature-number {
-        font-size: 48px; 
-        color: #F08030; 
+        font-size: 48px;
+        color: #7671FA; /* Primary color for numbers */
         font-weight: bold;
-        margin-right: 15px; 
+        margin-right: 15px;
     }
 
     .feature h3 {
-        font-size: 28px; 
+        font-size: 28px;
         font-weight: bold;
+        color: #07244C; /* Dark text for headings */
     }
 
     .feature p {
-        font-size: 18px; 
-        color: #333;
+        font-size: 18px;
+        color: #7E7FAC; /* Secondary text color */
     }
 
-    @media (min-width: 768px) {
-        .features {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .feature {
-            width: 30%;
-        }
-    }
-
+    /* Section 1 */
     .section-1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 120vh; 
+        height: 120vh;
         padding: 20px;
-        color: white;
-        background-color: #37AFE1;
+        color: #E5EAF3; /* Light text color */
+        background-color: #07244C; /* Dark background */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .content-wrapper {
         display: flex;
         justify-content: space-between;
-        width: 100%; 
-    }
-
-    .left-content {
-        flex: 1;
-        padding: 0;
+        width: 100%;
     }
 
     .left-content h1 {
-        font-size: 64px; 
+        font-size: 64px;
         font-weight: bold;
         margin-bottom: 20px;
+        color: #E5EAF3;
     }
 
     .left-content p {
-        font-size: 43px; 
+        font-size: 43px;
         margin-bottom: 20px;
+        color: #E5EAF3;
     }
 
     .cta-button {
         display: inline-block;
         padding: 15px 25px;
-        background-color: #ffffff;
-        color: #6f2dbd;
+        background-color: #7671FA;
+        color: #ffffff;
         font-weight: bold;
         font-size: 18px;
         border-radius: 8px;
@@ -163,7 +150,7 @@ include("./includes/header.php");
     }
 
     .cta-button:hover {
-        background-color: #ddd;
+        background-color: #7E7FAC; /* Slightly darker hover */
     }
 
     .right-content {
@@ -174,11 +161,12 @@ include("./includes/header.php");
     }
 
     .image-placeholder {
-        width: 100%; 
-        max-width: 700px; 
-        height: auto; 
+        width: 100%;
+        max-width: 700px;
+        height: auto;
     }
 </style>
+
 
 <section class="section-1">
     <div class="content-wrapper">

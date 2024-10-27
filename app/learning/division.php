@@ -1,39 +1,88 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 <link rel="stylesheet" href="../resources/css/learning.css">
-
-<div class="container-fluid" style="border: none; width: 100%; max-width: 3000px;">
-    <div class="row">
-        <?php include("../includes/homeheader.php"); ?>
+<div class="container-fluid" style="border: none; width: 100%; font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
+    <div class="header">
+        <h1 class="logo">Do Math & Conquer</h1>
     </div>
-    <div class="col-lg-9 mb-12 d-flex">
-        <div class="container justify-content-center">
-            <h1>Understanding Division</h1>
-            <p>Division is the process of distributing a number into equal parts or groups. It is a fundamental arithmetic operation used in various aspects of daily life, such as sharing resources, calculating averages, or determining rates. In this section, we'll explore the definition of division, the division symbol, parts of division, and examples.</p>
-            
-            <h1>What is Division?</h1>
-            <p>Division is a mathematical operation that separates a number (the dividend) into a specified number of equal parts (the divisor). The result of a division is called the quotient. For example, when we divide 6 by 2 (6 ÷ 2), the quotient is 3. Here, we split the number 6 into two equal parts.</p>
-            
-            <h1>The Division Symbol</h1>
-            <p>The division symbol (÷) is used to indicate that one number is being divided by another. In the expression 6 ÷ 2 = 3, the division sign shows that 6 is being divided into 2 equal parts, resulting in the quotient of 3.</p>
-            
-            <h1>Parts of Division</h1>
-            <p>A division statement consists of the following parts:</p>
-            <ul>
-                <li><strong>Dividend:</strong> The number being divided.</li>
-                <li><strong>Divisor:</strong> The number by which the dividend is divided.</li>
-                <li><strong>Quotient:</strong> The result obtained from dividing the dividend by the divisor.</li>
-            </ul>
 
-            <h1>Division Formula</h1>
-            <p>The division formula expresses the relationship between the dividend, divisor, and quotient as: dividend ÷ divisor = quotient. For example, in the equation 12 ÷ 3 = 4, 12 is the dividend, 3 is the divisor, and 4 is the quotient.</p>
-            <img src="../resources/images/tut2.png" style="width: 100%; max-width: 600px;" alt="Division Formula Example">
+    <div class="content-wrapper d-flex justify-content-center">
+        <div class="content-container">
+        <button id="back-btn" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+            <h1 class="main-heading">Understanding Division</h1>
+            <p class="intro-text">Division is the process of distributing a number into equal parts or groups. It is a fundamental arithmetic operation used in various aspects of daily life, such as sharing resources, calculating averages, or determining rates. In this section, we'll explore the definition of division, the division symbol, parts of division, and examples.</p>
 
-            <h1>Solved Examples of Division</h1>
-            <p>When solving division problems, it is helpful to understand how to divide single-digit numbers. For larger numbers, long division methods can be used. It's also important to recognize cases where division may not result in a whole number. In the following sections, we'll explore division with and without remainders.</p>
-            
+            <div class="section">
+                <h2>What is Division?</h2>
+                <p>Division is a mathematical operation that separates a number (the dividend) into a specified number of equal parts (the divisor). The result of a division is called the quotient. For example, when we divide 6 by 2 (6 ÷ 2), the quotient is 3. Here, we split the number 6 into two equal parts.</p>
+            </div>
+
+            <div class="section">
+                <h2>The Division Symbol</h2>
+                <p>The division symbol (÷) is used to indicate that one number is being divided by another. In the expression 6 ÷ 2 = 3, the division sign shows that 6 is being divided into 2 equal parts, resulting in the quotient of 3.</p>
+            </div>
+
+            <div class="section">
+                <h2>Parts of Division</h2>
+                <p>A division statement consists of the following parts:</p>
+                <ul>
+                    <li><strong>Dividend:</strong> The number being divided.</li>
+                    <li><strong>Divisor:</strong> The number by which the dividend is divided.</li>
+                    <li><strong>Quotient:</strong> The result obtained from dividing the dividend by the divisor.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Division Formula</h2>
+                <p>The division formula expresses the relationship between the dividend, divisor, and quotient as: dividend ÷ divisor = quotient. For example, in the equation 12 ÷ 3 = 4, 12 is the dividend, 3 is the divisor, and 4 is the quotient.</p>
+                <img src="../resources/images/tut2.png" style="width: 100%; max-width: 600px; margin-top: 15px;" alt="Division Formula Example">
+            </div>
+
+            <div class="section">
+                <h2>Solved Examples of Division</h2>
+                <p>When solving division problems, it is helpful to understand how to divide single-digit numbers. For larger numbers, long division methods can be used. It's also important to recognize cases where division may not result in a whole number. In the following sections, we'll explore division with and without remainders.</p>
+            </div>
+
             <div class="knowledge-test">Ready to test your knowledge?</div>
             <div class="button-container">
-                <a href="game.html" class="start-button">Start Playing</a>
+                <span class="start-button" id="open-modal-btn">Start Playing ➔</span>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <button class="close-btn" id="close-modal-btn">✖</button>
+        <h2>Choose Your Difficulty</h2>
+        <div class="modal-buttons">
+            <a href="../games/easy/division.php">Easy</a>
+            <a href="../games/medium/division.php">Medium</a>
+            <a href="../games/hard/division.php">Hard</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    openModalBtn.addEventListener('click', () => {
+        modalOverlay.style.display = 'block';
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        modalOverlay.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            modalOverlay.style.display = 'none';
+        }
+    });
+</script>

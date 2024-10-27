@@ -6,31 +6,34 @@ function generateBackground($symbol) {
     for ($i = 0; $i < 30; $i++) {
         $x = rand(0, 100); 
         $y = rand(0, 100); 
-        $opacity = rand(10, 40) / 100;
-        $background .= "<span style='position:absolute; top:{$y}%; left:{$x}%; opacity:{$opacity}; font-size: 5rem;'>$symbol</span>";
+        $opacity = rand(10, 20) / 100;
+        $background .= "<span style='position:absolute; top:{$y}%; left:{$x}%; opacity:{$opacity}; font-size: 5rem; color: black;'>$symbol</span>";
     }
     return $background;
 }
 ?>
 
 <style>
-
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    /* Footer */
     .footer {
-        background-color: #37AFE1;
-        color: white;
+        background-color: #465775; /* Softer navy blue */
+        color: #E1E8ED; 
         padding: 20px 0;
         text-align: center;
     }
 
     .footer a {
-        color: white;
+        color: #D1E4E5;
         text-decoration: none;
         margin: 0 15px;
         transition: color 0.3s;
     }
 
     .footer a:hover {
-        color: #FFD700;
+        color: #94C9A9; /* Soft green */
     }
 
     .footer .social-icons a {
@@ -38,87 +41,77 @@ function generateBackground($symbol) {
         font-size: 20px;
     }
 
+    /* Section styling */
     .section {
         display: flex;
-        justify-content: space-between; /* Align content on the sides */
-        align-items: center; /* Center items vertically */
-        flex-direction: row; /* Use row direction */
-        height: 130vh;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
         padding: 20px;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        text-align: left; /* Align text to the left */
+        color: #2E4053; /* Dark slate gray for contrast */
+        text-align: left;
         position: relative;
-        overflow: hidden; 
+        overflow: hidden;
         background-size: cover;
         background-position: center;
     }
 
+    /* Background and text colors */
     .section-addition, .section-multiplication {
-        background-color: #37AFE1;
+        background-color: #F7F9FB; /* Light blue-gray */
     }
 
     .section-subtraction, .section-division {
-        color: black;
-        background-color: #FFFECB;
+        background-color: #E8EFF5; /* Soft lavender */
+        color: #333;
     }
 
+    /* Content and heading styling */
     .text-content {
         flex: 1;
-        padding: 0;
-    }
-
-    .image-holder {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 0 20px;
     }
 
     .text-content h2 {
-        font-family: 'DejaVu Sans Mono', monospace;
-        font-size: 4.7rem;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        margin-bottom: 10px;
+        font-family: ;
+        font-size: 3.5rem;
+        color: #3A506B; /* Rich dark blue */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     .text-content p {
-        font-size: 2.5rem;
-        font-weight: 500;
-        width: 80%;
-        max-width: 1000px;
-        margin-bottom: 20px;
+        font-size: 1.7rem;
+        line-height: 1.6;
+        color: #2E4053;
     }
 
     .text-content .trivia {
-        font-size: 1.7rem;
-        color: #333333;
+        font-size: 1.4rem;
+        color: #6A8EAE; /* Subtle slate blue */
+        margin-top: 15px;
         font-weight: bold;
         font-style: italic;
-        margin-top: 15px;
-        max-width: 600px;
     }
 
+    /* Button styling */
     .start-btn {
-        margin: 20px auto; 
-        padding: 8px 16px;
-        background-color: #FF5733;
-        color: white;
-        font-size: 1.5rem;
+        display: inline-block;
+        padding: 12px 24px;
+        margin-top: 20px;
+        background-color: #A3D2CA; /* Soft aqua green */
+        color: #2E4053;
+        font-size: 1.3rem;
+        font-weight: bold;
         border-radius: 30px;
         text-decoration: none;
-        font-weight: bold;
-        display: flex;
-        width: 50%;
-        max-width: 600px;
-        align-items: center;
+        transition: background-color 0.3s;
     }
 
     .start-btn:hover {
-        background-color: #e04b29;
+        background-color: #88C6B1; /* Darker aqua */
     }
 
+    /* Symbol background */
     .symbol-bg {
         position: absolute;
         top: 0;
@@ -140,7 +133,7 @@ function generateBackground($symbol) {
         <a href="learning/addition.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/8.png" alt="Addition Image" style="width: 1000px; height: 1000px;">
+        <img src="resources/images/8.png" alt="Addition Image" style="width: 400px; height: 400px;">
     </div>
 </section>
 
@@ -155,7 +148,7 @@ function generateBackground($symbol) {
         <a href="learning/subtraction.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/6.png" alt="Subtraction Image"  style="width: 600px; height: 600px;">
+        <img src="resources/images/6.png" alt="Subtraction Image"  style="width: 400px; height: 400px;">
     </div>
 </section>
 
@@ -170,7 +163,7 @@ function generateBackground($symbol) {
         <a href="learning/multiplication.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/1.png" alt="Multiplication Image"  style="width: 600px; height: 600px;">
+        <img src="resources/images/1.png" alt="Multiplication Image"  style="width: 400px; height: 400px;">
     </div>
 </section>
 
@@ -185,9 +178,10 @@ function generateBackground($symbol) {
         <a href="learning/division.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/4.png" alt="Division Image"  style="width: 600px; height: 600px;">
+        <img src="resources/images/4.png" alt="Division Image"  style="width: 400px; height: 400px;">
     </div>
 </section>
+
 <footer class="footer">
     <div class="container">
         <div>
