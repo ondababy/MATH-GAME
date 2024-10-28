@@ -1,19 +1,17 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-<link rel="stylesheet" href="../resources/css/learning.css">
+<?php include("../includes/mainheader.php")?>
+
 <div class="container-fluid" style="border: none; width: 100%; font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
-    <div class="header">
+    <div class="header" style="background-color: #07244C;">
         <h1 class="logo">Do Math & Conquer</h1>
     </div>
 
     <div class="content-wrapper d-flex justify-content-center">
         <div class="content-container">
-        <button id="back-btn" onclick="window.history.back()">
-            <i class="fas fa-arrow-left"></i>
-        </button>
+            <button id="back-btn" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
             <h1 class="main-heading">Understanding Division</h1>
-            <p class="intro-text">Division is the process of distributing a number into equal parts or groups. It is a fundamental arithmetic operation used in various aspects of daily life, such as sharing resources, calculating averages, or determining rates. In this section, we'll explore the definition of division, the division symbol, parts of division, and examples.</p>
+            <p class="intro-text">Division is the process of distributing a number into equal parts or groups. It is a fundamental arithmetic operation used in various aspects of daily life, such as sharing resources, calculating averages, or determining rates. In this section, we'll explore the definition of division, the division symbol, parts of division, types of division, examples, and real-world applications.</p>
 
             <div class="section">
                 <h2>What is Division?</h2>
@@ -22,7 +20,7 @@
 
             <div class="section">
                 <h2>The Division Symbol</h2>
-                <p>The division symbol (÷) is used to indicate that one number is being divided by another. In the expression 6 ÷ 2 = 3, the division sign shows that 6 is being divided into 2 equal parts, resulting in the quotient of 3.</p>
+                <p>The division symbol (÷) is used to indicate that one number is being divided by another. In the expression 6 ÷ 2 = 3, the division sign shows that 6 is being divided into 2 equal parts, resulting in the quotient of 3. Another way to represent division is by using a slash (/) or fraction notation.</p>
             </div>
 
             <div class="section">
@@ -32,6 +30,16 @@
                     <li><strong>Dividend:</strong> The number being divided.</li>
                     <li><strong>Divisor:</strong> The number by which the dividend is divided.</li>
                     <li><strong>Quotient:</strong> The result obtained from dividing the dividend by the divisor.</li>
+                    <li><strong>Remainder:</strong> If the division does not result in a whole number, the remainder is what is left after dividing. For example, 10 ÷ 3 = 3 with a remainder of 1.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Types of Division</h2>
+                <p>There are two main types of division:</p>
+                <ul>
+                    <li><strong>Exact Division:</strong> When the division results in a whole number without a remainder. For example, 8 ÷ 2 = 4.</li>
+                    <li><strong>Division with Remainder:</strong> When the division leaves a remainder. For example, 10 ÷ 3 = 3 R1, where 1 is the remainder.</li>
                 </ul>
             </div>
 
@@ -39,6 +47,17 @@
                 <h2>Division Formula</h2>
                 <p>The division formula expresses the relationship between the dividend, divisor, and quotient as: dividend ÷ divisor = quotient. For example, in the equation 12 ÷ 3 = 4, 12 is the dividend, 3 is the divisor, and 4 is the quotient.</p>
                 <img src="../resources/images/tut2.png" style="width: 100%; max-width: 600px; margin-top: 15px;" alt="Division Formula Example">
+            </div>
+
+            <div class="section">
+                <h2>Real-World Applications of Division</h2>
+                <p>Division is useful in various real-life situations, such as:</p>
+                <ul>
+                    <li><strong>Sharing:</strong> Dividing a total amount of items equally among people, such as splitting a bill.</li>
+                    <li><strong>Distributing Resources:</strong> Dividing resources like food, money, or time.</li>
+                    <li><strong>Calculating Rates:</strong> Determining speed, rates, or prices per unit, such as miles per hour or price per item.</li>
+                    <li><strong>Averages:</strong> Calculating averages, such as finding the average score by dividing the total score by the number of tests.</li>
+                </ul>
             </div>
 
             <div class="section">
@@ -53,7 +72,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="modal-overlay" id="modal-overlay">
     <div class="modal">

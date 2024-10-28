@@ -45,7 +45,7 @@
         };
 
         const questionGenerator = () => {
-            num1 = randomValue(10, 100); 
+            num1 = randomValue(10, 50); 
             num2 = randomValue(1, num1); 
             solution = num1 - num2;
             question.innerHTML = `${num1} - ${num2} = <input type="number" id="inputValue" placeholder="?">`;
@@ -66,18 +66,19 @@
         });
 
         const startTimer = () => {
-            clearInterval(timer); 
-            timer = setInterval(() => {
-                timeRemaining--;
-                timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`;
-                if (timeRemaining <= 0) {
-                    clearInterval(timer);
-                    gameActive = false;
-                    showAlert("Time's up! You can start a new game.", "error");
-                    resetGame();
-                }
-            }, 1000);
-        };
+        clearInterval(timer); 
+        timer = setInterval(() => {
+            timeRemaining--;
+            timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`; 
+            if (timeRemaining <= 0) {
+                clearInterval(timer);
+                timeRemaining = 60;  
+                questionGenerator(); 
+                showAlert("Time's up! New question generated.", "error");
+                startTimer(); 
+            }
+        }, 500);
+    };
 
         submitBtn.addEventListener("click", () => {
             const userInput = document.getElementById("inputValue").value;
@@ -100,12 +101,11 @@
         });
 
         const resetGame = () => {
-            startBtn.style.display = 'inline-block';
-            submitBtn.style.display = 'none';
-            revealBtn.style.display = 'none';
             question.innerHTML = '';
-            solutionContainer.style.display = 'none';
-            alertBox.style.display = 'none';
+            document.getElementById("inputValue").value = '';
+            revealBtn.style.display = 'none';
+            startBtn.style.display = 'inline-block';
             gameActive = false;
+            clearInterval(timer); 
         };
     </script>

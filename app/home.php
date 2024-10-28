@@ -3,10 +3,10 @@ include("./includes/homeheader.php");
 
 function generateBackground($symbol) {
     $background = "";
-    for ($i = 0; $i < 30; $i++) {
+    for ($i = 0; $i < 20; $i++) {
         $x = rand(0, 100); 
         $y = rand(0, 100); 
-        $opacity = rand(10, 20) / 100;
+        $opacity = rand(10, 5) / 100;
         $background .= "<span style='position:absolute; top:{$y}%; left:{$x}%; opacity:{$opacity}; font-size: 5rem; color: black;'>$symbol</span>";
     }
     return $background;
@@ -16,11 +16,12 @@ function generateBackground($symbol) {
 <style>
     body {
         font-family: 'Poppins', sans-serif;
+        color: #2E4053;
     }
-    /* Footer */
+
     .footer {
-        background-color: #465775; /* Softer navy blue */
-        color: #E1E8ED; 
+        background-color: #465775;
+        color: #E1E8ED;
         padding: 20px 0;
         text-align: center;
     }
@@ -33,74 +34,72 @@ function generateBackground($symbol) {
     }
 
     .footer a:hover {
-        color: #94C9A9; /* Soft green */
+        color: #94C9A9;
     }
 
     .footer .social-icons a {
         margin: 0 10px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    /* Section styling */
     .section {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 100vh;
+        height: 90vh;
         padding: 20px;
-        color: #2E4053; /* Dark slate gray for contrast */
+        color: #2E4053;
         text-align: left;
         position: relative;
         overflow: hidden;
         background-size: cover;
         background-position: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Background and text colors */
     .section-addition, .section-multiplication {
-        background-color: #F7F9FB; /* Light blue-gray */
+        background-color: #F7F9FB;
     }
 
     .section-subtraction, .section-division {
-        background-color: #E8EFF5; /* Soft lavender */
+        background-color: #E8EFF5;
         color: #333;
     }
 
-    /* Content and heading styling */
     .text-content {
         flex: 1;
         padding: 0 20px;
     }
 
     .text-content h2 {
-        font-family: ;
-        font-size: 3.5rem;
-        color: #3A506B; /* Rich dark blue */
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        font-size: 2.5rem;
+        color: #3A506B;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
     }
 
     .text-content p {
-        font-size: 1.7rem;
-        line-height: 1.6;
+        font-size: 1.2rem;
+        line-height: 1.5;
         color: #2E4053;
+        margin-bottom: 10px;
     }
 
     .text-content .trivia {
-        font-size: 1.4rem;
-        color: #6A8EAE; /* Subtle slate blue */
-        margin-top: 15px;
+        font-size: 1rem;
+        color: #6A8EAE;
+        margin-top: 10px;
         font-weight: bold;
         font-style: italic;
     }
 
-    /* Button styling */
     .start-btn {
         display: inline-block;
-        padding: 12px 24px;
-        margin-top: 20px;
-        background-color: #A3D2CA; /* Soft aqua green */
+        padding: 10px 20px;
+        margin-top: 15px;
+        background-color: #A3D2CA;
         color: #2E4053;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: bold;
         border-radius: 30px;
         text-decoration: none;
@@ -108,10 +107,9 @@ function generateBackground($symbol) {
     }
 
     .start-btn:hover {
-        background-color: #88C6B1; /* Darker aqua */
+        background-color: #88C6B1;
     }
 
-    /* Symbol background */
     .symbol-bg {
         position: absolute;
         top: 0;
@@ -119,6 +117,12 @@ function generateBackground($symbol) {
         width: 100%;
         height: 100%;
         pointer-events: none;
+    }
+
+    .image-holder img {
+        width: 350px;
+        height: auto;
+        border-radius: 10px;
     }
 </style>
 
@@ -133,7 +137,7 @@ function generateBackground($symbol) {
         <a href="learning/addition.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/8.png" alt="Addition Image" style="width: 400px; height: 400px;">
+        <img src="resources/images/8.png" alt="Addition Image">
     </div>
 </section>
 
@@ -148,7 +152,7 @@ function generateBackground($symbol) {
         <a href="learning/subtraction.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/6.png" alt="Subtraction Image"  style="width: 400px; height: 400px;">
+        <img src="resources/images/6.png" alt="Subtraction Image">
     </div>
 </section>
 
@@ -163,7 +167,7 @@ function generateBackground($symbol) {
         <a href="learning/multiplication.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/1.png" alt="Multiplication Image"  style="width: 400px; height: 400px;">
+        <img src="resources/images/1.png" alt="Multiplication Image">
     </div>
 </section>
 
@@ -178,27 +182,25 @@ function generateBackground($symbol) {
         <a href="learning/division.php" class="start-btn">Start Learning ➔</a>
     </div>
     <div class="image-holder">
-        <img src="resources/images/4.png" alt="Division Image"  style="width: 400px; height: 400px;">
+        <img src="resources/images/4.png" alt="Division Image">
     </div>
 </section>
 
 <footer class="footer">
-    <div class="container">
-        <div>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-        </div>
-        <div class="social-icons mt-3">
-            <a href="#" title="Facebook"><i class="fab fa-facebook-square"></i></a>
-            <a href="#" title="Twitter"><i class="fab fa-twitter-square"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram-square"></i></a>
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="mt-3">
-            &copy; <?php echo date("Y"); ?> Do Math & Conquer. All rights reserved.
-        </div>
+    <div>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+    </div>
+    <div class="social-icons">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram-square"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div>
+        &copy; <?php echo date("Y"); ?> Do Math & Conquer. All rights reserved.
     </div>
 </footer>

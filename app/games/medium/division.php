@@ -47,8 +47,8 @@
     };
 
     const questionGenerator = () => {
-        num2 = randomValue(1, 20); 
-        solution = randomValue(1, 20); 
+        num2 = randomValue(2, 50); 
+        solution = randomValue(2, 50); 
         num1 = solution * num2; 
         question.innerHTML = `${num1} ÷ ${num2} = <input type="number" id="inputValue" placeholder="?">`;
     };
@@ -71,14 +71,15 @@
         clearInterval(timer); 
         timer = setInterval(() => {
             timeRemaining--;
-            timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`;
+            timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`; 
             if (timeRemaining <= 0) {
                 clearInterval(timer);
-                gameActive = false;
-                showAlert("Time's up! You can start a new game.", "error");
-                resetGame();
+                timeRemaining = 60;  
+                questionGenerator(); 
+                showAlert("Time's up! New question generated.", "error");
+                startTimer(); 
             }
-        }, 1000);
+        }, 500);
     };
 
     submitBtn.addEventListener("click", () => {
@@ -102,10 +103,11 @@
     });
 
     const resetGame = () => {
-        startBtn.style.display = 'inline-block';
         question.innerHTML = '';
-        solutionContainer.style.display = 'none';
-        alertBox.style.display = 'none';
+        document.getElementById("inputValue").value = '';
+        revealBtn.style.display = 'none';
+        startBtn.style.display = 'inline-block';
         gameActive = false;
+        clearInterval(timer); 
     };
 </script>

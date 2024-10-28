@@ -18,7 +18,7 @@ define('BASE_URL', '/it-professional-elective/app/');
         }
         .navbar-brand {
             color: #E5EAF3; 
-            font-family: 'Pacifico', cursive;
+            font-family: 'Poppins', sans-serif;
             font-size: 30px;
             font-weight: bold;
         }

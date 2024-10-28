@@ -69,34 +69,35 @@
 
     const startTimer = () => {
         clearInterval(timer); 
-        timer = setInterval(() => {
-            timeRemaining--;
-            timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`;
-            if (timeRemaining <= 0) {
-                clearInterval(timer);
-                gameActive = false;
-                showAlert("Time's up! You can start a new game.", "error");
-                resetGame();
-            }
-        }, 1000);
-    };
+            timer = setInterval(() => {
+                timeRemaining--;
+                timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`; 
+                if (timeRemaining <= 0) {
+                    clearInterval(timer);
+                    timeRemaining = 30;  
+                    questionGenerator(); 
+                    showAlert("Time's up! New question generated.", "error");
+                    startTimer(); 
+                }
+            }, 1000);
+        };
 
     submitBtn.addEventListener("click", () => {
         const userInput = document.getElementById("inputValue").value;
-        if (userInput) {
-            if (parseFloat(userInput) === solution) {
-                showAlert("Great Job! Correct Answer.", "success");
-                timeRemaining = 30; 
-                timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`;
-                questionGenerator(); 
-                solutionContainer.style.display = 'none';
+            if (userInput) {
+                if (parseFloat(userInput) === solution) {
+                    showAlert("Great Job! Correct Answer.", "success");
+                    timeRemaining = 30; 
+                    timerDisplay.innerHTML = `Timer: ${timeRemaining} seconds`;
+                    questionGenerator(); 
+                    solutionContainer.style.display = 'none';
+                } else {
+                    showAlert("Oops! That's not correct.", "error");
+                }
             } else {
-                showAlert("Oops! That's not correct.", "error");
+                showAlert("Please enter a value.", "error");
             }
-        } else {
-            showAlert("Please enter a value.", "error");
-        }
-    });
+        });
 
     revealBtn.addEventListener("click", () => {
         solutionDisplay.innerHTML = `${num1} × ${num2} = ${solution}`;
@@ -104,13 +105,11 @@
     });
 
     const resetGame = () => {
-        startBtn.style.display = 'inline-block';
-        submitBtn.style.display = 'none';
-        revealBtn.style.display = 'none';
-        question.innerHTML = '';
-        solutionContainer.style.display = 'none';
-        alertBox.style.display = 'none';
-        gameActive = false;
-        clearInterval(timer);
-    };
+            question.innerHTML = '';
+            document.getElementById("inputValue").value = '';
+            revealBtn.style.display = 'none';
+            startBtn.style.display = 'inline-block';
+            gameActive = false;
+            clearInterval(timer); 
+        };
 </script>

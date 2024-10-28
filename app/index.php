@@ -1,12 +1,10 @@
 <?php
 include("./includes/header.php");
 ?>
-
 <style>
-    /* Footer Styling */
     .footer {
-        background-color: #7671FA; /* Primary color */
-        color: #E5EAF3; /* Light color for contrast */
+        background-color: #7671FA;
+        color: #E5EAF3;
         padding: 20px 0;
         text-align: center;
     }
@@ -14,21 +12,21 @@ include("./includes/header.php");
     .footer a {
         color: #E5EAF3;
         text-decoration: none;
-        margin: 0 15px;
+        margin: 0 10px;
+        font-size: 14px;
         transition: color 0.3s;
     }
 
     .footer a:hover {
-        color: #FFD700; /* Gold hover color for emphasis */
+        color: #FFD700;
     }
 
     .footer .social-icons a {
-        margin: 0 10px;
-        font-size: 20px;
+        margin: 0 8px;
+        font-size: 18px;
         color: #E5EAF3;
     }
 
-    /* Topics section */
     .topics {
         display: flex;
         justify-content: center;
@@ -37,51 +35,51 @@ include("./includes/header.php");
     }
 
     .topic {
-        width: 300px; 
-        margin: 20px; 
+        width: 280px;
+        margin: 15px;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-        border-radius: 8px; 
-        overflow: hidden; 
-        background-color: #E5EAF3; /* Light background for cards */
-        color: #07244C; /* Dark text color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #E5EAF3;
+        color: #07244C;
     }
 
     .topics h3 {
-        margin: 15px 0 10px;
-        color: #07244C; /* Heading color */
-    }
-
-    /* Features Section */
-    .features-section {
-        padding: 60px 0;
-        text-align: center;
-        background-color: #E5EAF3; /* Light background */
+        margin: 10px 0 5px;
+        font-size: 20px;
+        color: #07244C;
     }
 
     .section-title {
-        font-size: 36px;
+        font-size: 28px;
         font-weight: bold;
-        margin-bottom: 60px;
-        color: #07244C; /* Dark text color */
+        margin-bottom: 40px;
+        color: #07244C;
+    }
+
+    .features-section {
+        padding: 50px 0;
+        text-align: center;
+        background-color: #E5EAF3;
     }
 
     .features {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 40px;
     }
 
     .feature {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .feature-img img {
-        width: 130px;
-        height: 200px;
+        width: 120px;
+        height: 180px;
     }
 
     .feature-text {
@@ -89,32 +87,31 @@ include("./includes/header.php");
     }
 
     .feature-number {
-        font-size: 48px;
-        color: #7671FA; /* Primary color for numbers */
+        font-size: 36px;
+        color: #7671FA;
         font-weight: bold;
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     .feature h3 {
-        font-size: 28px;
+        font-size: 22px;
         font-weight: bold;
-        color: #07244C; /* Dark text for headings */
+        color: #07244C;
     }
 
     .feature p {
-        font-size: 18px;
-        color: #7E7FAC; /* Secondary text color */
+        font-size: 16px;
+        color: #7E7FAC;
     }
 
-    /* Section 1 */
     .section-1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 120vh;
+        height: 100vh;
         padding: 20px;
-        color: #E5EAF3; /* Light text color */
-        background-color: #07244C; /* Dark background */
+        color: #E5EAF3;
+        background-color: #07244C;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
@@ -125,32 +122,32 @@ include("./includes/header.php");
     }
 
     .left-content h1 {
-        font-size: 64px;
+        font-size: 48px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         color: #E5EAF3;
     }
 
     .left-content p {
-        font-size: 43px;
-        margin-bottom: 20px;
+        font-size: 18px;
+        margin-bottom: 15px;
         color: #E5EAF3;
     }
 
     .cta-button {
         display: inline-block;
-        padding: 15px 25px;
+        padding: 12px 20px;
         background-color: #7671FA;
         color: #ffffff;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
         border-radius: 8px;
         text-decoration: none;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .cta-button:hover {
-        background-color: #7E7FAC; /* Slightly darker hover */
+        background-color: #7E7FAC;
     }
 
     .right-content {
@@ -162,10 +159,15 @@ include("./includes/header.php");
 
     .image-placeholder {
         width: 100%;
-        max-width: 700px;
+        max-width: 600px;
         height: auto;
     }
+
+    .footer .mt-3 {
+        font-size: 12px;
+    }
 </style>
+
 
 
 <section class="section-1">

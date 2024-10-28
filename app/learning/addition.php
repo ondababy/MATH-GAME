@@ -1,10 +1,7 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-<link rel="stylesheet" href="../resources/css/learning.css">
+<?php include("../includes/mainheader.php")?>
 
 <div class="container-fluid" style="border: none; width: 100%; font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
-    <div class="header">
+    <div class="header" style="background-color: #07244C;">
         <h1 class="logo">Do Math & Conquer</h1>
     </div>
 
@@ -14,37 +11,68 @@
                 <i class="fas fa-arrow-left"></i>
             </button>
             <h1 class="main-heading">Understanding Addition</h1>
-            <p class="intro-text">Addition is the process of combining two or more numbers to find their total...</p>
+            <p class="intro-text">Addition is a fundamental arithmetic operation that helps us combine values to find their total. Learning how to add is crucial for solving math problems, whether it's simple calculations or complex equations.</p>
 
             <div class="section">
                 <h2>What is Addition?</h2>
-                <p>Addition is a mathematical operation that combines numbers. The result of an addition is called the sum. For example, when we add 2 and 3 (2 + 3), the sum is 5. Here, we added the two numbers to find the total.</p>
+                <p>Addition is the mathematical operation that brings two or more numbers together to form a new total called the sum. For example, when we add 2 and 3 (2 + 3), we get a sum of 5. Addition is one of the four basic operations in mathematics, along with subtraction, multiplication, and division.</p>
+                <p>In real life, addition is used in situations such as calculating money, combining scores, counting items, and much more.</p>
             </div>
 
             <div class="section">
                 <h2>The Addition Symbol</h2>
-                <p>The addition symbol (+) is used to signify that two numbers are being added. In the expression 2 + 3 = 5, the plus sign connects the numbers, showing that they are to be combined to yield the sum.</p>
+                <p>The symbol for addition is the plus sign <strong>(+)</strong>. It signifies that two or more values are to be combined to form a sum. In an addition sentence like 4 + 5 = 9, the plus sign connects the two numbers, indicating that they should be added together to get the total.</p>
             </div>
 
             <div class="section">
                 <h2>Parts of Addition</h2>
-                <p>An addition statement consists of the following parts:</p>
+                <p>An addition statement includes the following parts:</p>
                 <ul>
-                    <li><strong>Addends:</strong> The numbers being added together.</li>
-                    <li><strong>Operator:</strong> The addition symbol (+) used between the addends.</li>
-                    <li><strong>Sum:</strong> The result obtained from adding the addends.</li>
+                    <li><strong>Addends:</strong> These are the numbers that we are adding together.</li>
+                    <li><strong>Operator:</strong> The addition symbol (+) that shows the action of combining the numbers.</li>
+                    <li><strong>Sum:</strong> The result obtained by adding the addends.</li>
                 </ul>
+                <p>For example, in the equation 6 + 7 = 13, 6 and 7 are the addends, and 13 is the sum.</p>
             </div>
 
             <div class="section">
                 <h2>Addition Formula</h2>
-                <p>The addition formula expresses the relationship between the addends and their sum as: addend + addend = sum. For example, in the equation 5 + 6 = 11, 5 and 6 are the addends, and 11 is the sum.</p>
+                <p>The formula for addition is simple: <strong>addend + addend = sum</strong>. For instance, in the equation 8 + 5 = 13, 8 and 5 are combined to yield a sum of 13.</p>
                 <img src="../resources/images/tut.png" style="width: 100%; max-width: 600px; margin-top: 15px;" alt="Addition Formula Example">
             </div>
 
             <div class="section">
+                <h2>Types of Addition</h2>
+                <p>Addition can be classified based on the number and type of addends. Here are a few types of addition:</p>
+                <ul>
+                    <li><strong>Single-Digit Addition:</strong> Adding numbers between 0 and 9. E.g., 3 + 4 = 7.</li>
+                    <li><strong>Double-Digit Addition:</strong> Adding two-digit numbers. E.g., 23 + 15 = 38.</li>
+                    <li><strong>Column Addition:</strong> When adding large numbers, it's useful to arrange numbers in columns by place value (ones, tens, hundreds) to make addition easier.</li>
+                    <li><strong>Adding with Regrouping (Carrying):</strong> When a column adds up to more than 9, the extra value is carried over to the next column. E.g., 57 + 68 = 125.</li>
+                </ul>
+            </div>
+
+            <div class="section">
                 <h2>Solved Examples of Addition</h2>
-                <p>When solving addition problems, you can easily add single-digit numbers. However, for larger numbers, it's helpful to organize them by place value (ones, tens, hundreds, etc.). Start adding from the right side (the ones column) and move left. Sometimes you'll encounter carry-overs in your calculations. In the following sections, we'll explore addition with and without regrouping.</p>
+                <p>Here are some examples that illustrate addition with and without regrouping:</p>
+                <ul>
+                    <li><strong>Example 1 (No Regrouping):</strong> 23 + 14 = 37</li>
+                    <li><strong>Example 2 (With Regrouping):</strong> 76 + 59 = 135 (carry 1 to the next column)</li>
+                    <li><strong>Example 3 (Column Addition):</strong><br> 
+                        <pre>
+                           459
+                        +  284
+                        ------
+                           743
+                        </pre>
+                    </li>
+                </ul>
+                <p>In each case, remember to align the numbers by their place values to ensure accuracy, especially when adding larger numbers.</p>
+            </div>
+
+            <div class="section">
+                <h2>Why is Addition Important?</h2>
+                <p>Addition is a foundational skill in mathematics and daily life. It is essential for calculating costs, managing time, measuring, and solving problems. Developing a solid understanding of addition paves the way for mastering other operations and understanding more complex math concepts.</p>
             </div>
 
             <div class="knowledge-test">Ready to test your knowledge?</div>
@@ -54,7 +82,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="modal-overlay" id="modal-overlay">
     <div class="modal">

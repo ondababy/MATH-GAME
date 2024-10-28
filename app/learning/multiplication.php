@@ -1,12 +1,15 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="../resources/css/learning.css">
+<?php include("../includes/mainheader.php")?>
+
 <div class="container-fluid" style="border: none; width: 100%; font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
-    <div class="header">
+    <div class="header" style="background-color: #07244C;">
         <h1 class="logo">Do Math & Conquer</h1>
     </div>
 
     <div class="content-wrapper d-flex justify-content-center">
         <div class="content-container">
+            <button id="back-btn" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
             <h1 class="main-heading">Understanding Multiplication</h1>
             <p class="intro-text">Multiplication is the process of combining equal groups of numbers to find their total. It is a fundamental arithmetic operation used in various aspects of daily life, such as calculating areas, determining costs, or analyzing data. In this section, we'll explore the definition of multiplication, the multiplication symbol, parts of multiplication, and examples.</p>
             
@@ -37,6 +40,26 @@
             </div>
 
             <div class="section">
+                <h2>Properties of Multiplication</h2>
+                <ul>
+                    <li><strong>Commutative Property:</strong> The order of factors doesn’t affect the product. For instance, 3 × 4 is the same as 4 × 3.</li>
+                    <li><strong>Associative Property:</strong> When multiplying three or more numbers, grouping doesn’t affect the product, such as (2 × 3) × 4 = 2 × (3 × 4).</li>
+                    <li><strong>Distributive Property:</strong> Multiplication distributes over addition, like in 3 × (4 + 5) = (3 × 4) + (3 × 5).</li>
+                    <li><strong>Identity Property:</strong> Multiplying by 1 leaves the number unchanged, e.g., 7 × 1 = 7.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Real-World Applications of Multiplication</h2>
+                <p>Multiplication is used in many everyday situations, such as:</p>
+                <ul>
+                    <li>Calculating the total cost of items when each item costs a set amount.</li>
+                    <li>Finding areas of shapes, such as rectangles (length × width).</li>
+                    <li>Working out distances by combining speeds and times (e.g., speed × time = distance).</li>
+                </ul>
+            </div>
+
+            <div class="section">
                 <h2>Solved Examples of Multiplication</h2>
                 <p>When solving multiplication problems, you can easily multiply single-digit numbers. For larger numbers, it's helpful to organize them using methods like grid multiplication or the traditional algorithm. In the following sections, we'll explore multiplication with and without carrying.</p>
             </div>
@@ -48,7 +71,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="modal-overlay" id="modal-overlay">
     <div class="modal">

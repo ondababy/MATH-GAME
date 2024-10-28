@@ -14,21 +14,18 @@ define('BASE_URL', '/it-professional-elective/app/');
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Do Math & Conquer</title>
     <style>
-        /* Navbar styling */
         .custom-navbar {
-            background-color: #07244C; /* Dark navy blue */
+            background-color: #07244C; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
-
         .custom-navbar-brand {
-            color: #E5EAF3; /* Light blue-gray */
-            font-family: 'Pacifico', cursive;
+            color: #E5EAF3;
+            font-family: 'Poppins', sans-serif;
             font-size: 30px;
             font-weight: bold;
         }
-
         .custom-navbar-brand:hover {
-            color: #7671FA; /* Primary blue for hover */
+            color: #7671FA; 
         }
 
     </style>
