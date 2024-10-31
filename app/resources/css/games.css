@@ -15,7 +15,6 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
     width: 90%;
     max-width: 600px;
     text-align: center;
@@ -51,9 +50,9 @@ body {
 }
 
 .header {
+    background-color: #1e40af; 
     width: 100%;
     padding: 20px;
-    color: #ffffff;
     font-size: 2rem;
     font-weight: 700;
     margin-top: 50px;

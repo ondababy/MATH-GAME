@@ -5,7 +5,7 @@
     <button id="back-btn" onclick="window.history.back()">
         <i class="fas fa-arrow-left"></i>
     </button>
-    <div class="header">Do Math & Conquer</div>
+    <div class="header" style="background-color: #1e40af; ">Do Math & Conquer</div>
     <h3>Addition - Medium</h3>
     <p>Fill in the blank with the correct answer!</p>
     <div id="timer">Timer: 60 seconds</div>

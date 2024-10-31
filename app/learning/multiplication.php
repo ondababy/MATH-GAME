@@ -1,5 +1,7 @@
-<?php include("../includes/mainheader.php")?>
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<link rel="stylesheet" href="../resources/css/learning.css">
 <div class="container-fluid" style="border: none; width: 100%; font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
     <div class="header" style="background-color: #07244C;">
         <h1 class="logo">Do Math & Conquer</h1>

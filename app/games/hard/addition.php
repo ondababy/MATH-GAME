@@ -4,8 +4,9 @@
 <div class="container">
     <button id="back-btn" onclick="window.history.back()">
         <i class="fas fa-arrow-left"></i>
+        Back
     </button>
-    <div class="header">Do Math & Conquer</div>
+    <div class="header" style="background-color: #1e40af; ">Do Math & Conquer</div>
     <h3>Addition - Hard</h3>
     <p>Fill in the blank with the correct answer!</p>
     <div id="timer">Timer: 30 seconds</div>
